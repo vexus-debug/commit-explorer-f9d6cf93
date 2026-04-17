@@ -14,6 +14,13 @@ import img5 from "@/assets/bestojis-team.jpg";
 import img6 from "@/assets/bestojis-conference-team.jpg";
 import img7 from "@/assets/bestojis-conference-walk.jpg";
 import img8 from "@/assets/bestojis-npoots.jpg";
+import vid1 from "@/assets/bestojis-video-1.mp4";
+import vid2 from "@/assets/bestojis-video-2.mp4";
+
+const galleryVideos = [
+  { src: vid1, title: "Inside Bestojis — Restoring Mobility" },
+  { src: vid2, title: "Stories of Hope & Rehabilitation" },
+];
 
 const categories = ["All", "Prosthetics & Orthotics", "Clubfoot & Rehabilitation", "Team & Conferences"] as const;
 
@@ -99,6 +106,19 @@ const Gallery = () => {
           {filtered.length === 0 && (
             <p className="text-center text-muted-foreground py-12">No photos in this category yet.</p>
           )}
+
+          {/* Videos */}
+          <div className="mt-16">
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground text-center mb-8">Videos</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              {galleryVideos.map((v, i) => (
+                <div key={i} className="rounded-2xl overflow-hidden bg-muted shadow-sm">
+                  <video src={v.src} controls playsInline preload="metadata" className="w-full aspect-video object-cover" />
+                  <p className="px-4 py-3 text-sm font-medium text-foreground">{v.title}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
