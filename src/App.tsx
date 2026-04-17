@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { SiteContentProvider } from "@/contexts/SiteContentContext";
 import ScrollToTop from "@/components/ScrollToTop";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import Index from "./pages/Index.tsx";
 import About from "./pages/About.tsx";
 import Programs from "./pages/Programs.tsx";
@@ -94,6 +95,7 @@ const App = () => (
         <BrowserRouter>
           <ScrollToTop />
           <AnimatedRoutes />
+          <WhatsAppFloat />
         </BrowserRouter>
       </TooltipProvider>
     </SiteContentProvider>
