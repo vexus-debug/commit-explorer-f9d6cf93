@@ -20,7 +20,7 @@ const PageHero = ({ title, subtitle, description, image, ctaLabel, ctaLink }: Pr
       : {
           initial: { opacity: 0, y: 24 },
           animate: { opacity: 1, y: 0 },
-          transition: { duration: 0.7, delay, ease: 'easeOut' },
+          transition: { duration: 0.7, delay, ease: "easeOut" as const },
         };
 
   return (
@@ -32,7 +32,7 @@ const PageHero = ({ title, subtitle, description, image, ctaLabel, ctaLink }: Pr
           className="w-full h-full object-cover"
           initial={reduce ? {} : { scale: 1.08 }}
           animate={reduce ? {} : { scale: 1 }}
-          transition={{ duration: 1.6, ease: 'easeOut' }}
+          transition={{ duration: 1.6, ease: "easeOut" as const }}
         />
         <div className="absolute inset-0 bg-gradient-hero" />
       </div>
