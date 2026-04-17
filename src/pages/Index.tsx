@@ -6,6 +6,7 @@ import MissionSection from "@/components/MissionSection";
 import JourneySection from "@/components/JourneySection";
 import ImpactSection from "@/components/ImpactSection";
 import GallerySection from "@/components/GallerySection";
+import VideosSection from "@/components/VideosSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
@@ -23,6 +24,7 @@ const Index = () => {
       <JourneySection />
       <ImpactSection />
       <GallerySection />
+      <VideosSection />
       <TestimonialsSection />
       <FAQSection />
       <CTASection />
