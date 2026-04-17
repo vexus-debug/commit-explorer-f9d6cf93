@@ -14,11 +14,8 @@ const Navbar = () => {
   return (
     <nav className="bg-background shadow-sm border-b border-border">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <Link to="/" className="flex items-center gap-2.5">
+        <Link to="/" className="flex items-center">
           <img src={logo} alt={`${content.siteName} logo`} className="h-10 w-10 object-contain" />
-          <span className="font-heading text-base sm:text-lg font-bold text-foreground leading-tight">
-            {content.siteName}
-          </span>
         </Link>
 
         <div className="flex items-center gap-2">
