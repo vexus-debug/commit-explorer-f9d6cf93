@@ -63,6 +63,29 @@ const Navbar = () => {
                     Donate Now
                   </Button>
                 </Link>
+
+                {content.topBar.socialLinks.length > 0 && (
+                  <div className="mt-6 pt-4 border-t border-border">
+                    <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground mb-3 px-1">
+                      Follow us
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {content.topBar.socialLinks.map((link) => (
+                        <a
+                          key={link.label}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={link.label}
+                          className="flex items-center gap-2 rounded-full border border-border bg-muted/40 px-3 py-1.5 text-xs font-medium text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                        >
+                          <span className="font-semibold">{link.shortLabel}</span>
+                          <span>{link.label}</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </SheetContent>
           </Sheet>
